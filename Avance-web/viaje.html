@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUTAS DEL SOL PERU SAC – Viajes</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background: url('imagen/fondo-viaje.jpg') no-repeat center center fixed;
+      background-size: cover;
+      scroll-behavior: smooth;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Capa oscura para la introducción */
+    .overlay-intro {
+      background: rgba(0,0,0,0.55);
+      padding: 80px 20px;
+      backdrop-filter: blur(3px);
+      color: white;
+      text-align: center;
+    }
+
+    .overlay-intro h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover { transform: scale(1.03); }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* Información importante */
+    .info-importante {
+      background: #f7f7f7;
+      padding: 60px 20px;
+    }
+
+    .info-importante h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .info-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .info-column {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-column h3 {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    footer i { color: #0d6efd; margin-right: 5px; }
+  </style>
+</head>
+
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="fas fa-sun"></i> Rutas del Sol Perú
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fas fa-map"></i> Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link active" href="viaje.html"><i class="fas fa-suitcase-rolling"></i> Viajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="pago.html"><i class="fas fa-credit-card"></i> Pago</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ INTRODUCCIÓN ============ -->
+<section class="overlay-intro">
+  <h1>Catálogo Oficial de Paquetes Turísticos 2025</h1>
+  <p>Descubre los destinos más increíbles del Perú 🇵🇪</p>
+</section>
+
+  <!-- ============ GRID ============ -->
+  <main class="grid-container">
+
+    <!-- 1 Cusco -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Cusco">
+        <img src="imagen/cusco.jpg" alt="Cusco" />
+      </a>
+      <h3>Paquetes a Cusco</h3>
+      <p class="duracion">6 DÍAS / 5 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Vuelo ✈️</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Cusco">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 50</strong> por persona</p>
+      <a href="destino.html?lugar=Cusco" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Cusco" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 2 Huacachina -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Huacachina">
+        <img src="imagen/huacachina.jpg" alt="Huacachina" />
+      </a>
+      <h3>Paquetes a Huacachina</h3>
+      <p class="duracion">2 DÍAS / 1 NOCHE</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Tour aventura</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Huacachina">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 199</strong> por persona</p>
+      <a href="destino.html?lugar=Huacachina" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Huacachina" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 3 Arequipa -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Arequipa">
+        <img src="imagen/arequipa.jpg" alt="Arequipa" />
+      </a>
+      <h3>Paquetes a Arequipa</h3>
+      <p class="duracion">5 DÍAS / 4 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel 3⭐ + Vuelo</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Arequipa">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 480</strong> por persona</p>
+      <a href="destino.html?lugar=Arequipa" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Arequipa" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 4 Tarapoto -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Tarapoto">
+        <img src="imagen/tarapoto.jpg" alt="Tarapoto" />
+      </a>
+      <h3>Paquetes a Tarapoto</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Vuelo + Tours</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Tarapoto">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 399</strong> por persona</p>
+      <a href="destino.html?lugar=Tarapoto" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Tarapoto" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 5 Puno -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Puno">
+        <img src="imagen/puno.jpg" alt="Puno" />
+      </a>
+      <h3>Paquetes a Puno</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Lago Titicaca</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Puno">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 360</strong> por persona</p>
+      <a href="destino.html?lugar=Puno" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Puno" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 6 Iquitos -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Iquitos">
+        <img src="imagen/iquitos.jpg" alt="Iquitos" />
+      </a>
+      <h3>Paquetes a Iquitos</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Vuelo + Selva</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Iquitos">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 620</strong> por persona</p>
+      <a href="destino.html?lugar=Iquitos" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Iquitos" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 7 Cajamarca -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Cajamarca">
+        <img src="imagen/cajamarca.jpg" alt="Cajamarca" />
+      </a>
+      <h3>Paquetes a Cajamarca</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + City Tour</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Cajamarca">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 380</strong> por persona</p>
+      <a href="destino.html?lugar=Cajamarca" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Cajamarca" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 8 Piura -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Piura">
+        <img src="imagen/piura.jpg" alt="Piura" />
+      </a>
+      <h3>Paquetes a Piura</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Vuelo</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Piura">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 550</strong> por persona</p>
+      <a href="destino.html?lugar=Piura" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Piura" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 9 Máncora -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Máncora">
+        <img src="imagen/mancora.jpg" alt="Máncora" />
+      </a>
+      <h3>Paquetes a Máncora</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Playa + Hotel</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Máncora">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 480</strong> por persona</p>
+      <a href="destino.html?lugar=Máncora" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Máncora" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 10 Trujillo -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Trujillo">
+        <img src="imagen/trujillo.jpg" alt="Trujillo" />
+      </a>
+      <h3>Paquetes a Trujillo</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Cultura</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Trujillo">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 360</strong> por persona</p>
+      <a href="destino.html?lugar=Trujillo" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Trujillo" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 11 Tumbes -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Tumbes">
+        <img src="imagen/tumbes.jpg" alt="Tumbes" />
+      </a>
+      <h3>Paquetes a Tumbes</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Playa + Hotel + Full Relax</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Tumbes">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 460</strong> por persona</p>
+      <a href="destino.html?lugar=Tumbes" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Tumbes" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 12 Oxapampa -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Oxapampa">
+        <img src="imagen/oxapampa.jpg" alt="Oxapampa" />
+      </a>
+      <h3>Paquetes a Oxapampa</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Naturaleza + Aventura</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Oxapampa">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 330</strong> por persona</p>
+      <a href="destino.html?lugar=Oxapampa" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Oxapampa" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 13 Nazca -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Nazca">
+        <img src="imagen/nazca.jpg" alt="Nazca" />
+      </a>
+      <h3>Paquetes a Nazca</h3>
+      <p class="duracion">2 DÍAS / 1 NOCHE</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Sobrevuelo + Alojamiento</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Nazca">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 280</strong> por persona</p>
+      <a href="destino.html?lugar=Nazca" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Nazca" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 14 Moquegua -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Moquegua">
+        <img src="imagen/moquegua.jpg" alt="Moquegua" />
+      </a>
+      <h3>Paquetes a Moquegua</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Gastronomía</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Moquegua">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 310</strong> por persona</p>
+      <a href="destino.html?lugar=Moquegua" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Moquegua" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 15 Tarma -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Tarma">
+        <img src="imagen/tarma.jpg" alt="Tarma" />
+      </a>
+      <h3>Paquetes a Tarma</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Naturaleza</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Tarma">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 295</strong> por persona</p>
+      <a href="destino.html?lugar=Tarma" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Tarma" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 16 Ayacucho -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Ayacucho">
+        <img src="imagen/ayacucho.jpg" alt="Ayacucho" />
+      </a>
+      <h3>Paquetes a Ayacucho</h3>
+      <p class="duracion">4 DÍAS / 3 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + City Tour</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Ayacucho">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 350</strong> por persona</p>
+      <a href="destino.html?lugar=Ayacucho" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Ayacucho" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 17 Huaraz -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Huaraz">
+        <img src="imagen/huaraz.jpg" alt="Huaraz" />
+      </a>
+      <h3>Paquetes a Huaraz</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Hotel + Tours Nevado</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Huaraz">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 370</strong> por persona</p>
+      <a href="destino.html?lugar=Huaraz" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Huaraz" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 18 Lima -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Lima">
+        <img src="imagen/lima.jpg" alt="Lima" />
+      </a>
+      <h3>Paquetes a Lima</h3>
+      <p class="duracion">2 DÍAS / 1 NOCHE</p>
+      <p class="salida">🌎 City Tour desde otras ciudades</p>
+      <p class="tipo">Hotel + Gastronomía</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Lima">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 180</strong> por persona</p>
+      <a href="destino.html?lugar=Lima" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Lima" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 19 Chachapoyas -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Chachapoyas">
+        <img src="imagen/chachapoyas.jpg" alt="Chachapoyas" />
+      </a>
+      <h3>Paquetes a Chachapoyas</h3>
+      <p class="duracion">5 DÍAS / 4 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Kuélap + Gocta</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Chachapoyas">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 690</strong> por persona</p>
+      <a href="destino.html?lugar=Chachapoyas" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Chachapoyas" class="btn secondary">Reservar</a>
+    </div>
+
+    <!-- 20 Pucallpa -->
+    <div class="card scroll-reveal">
+      <a href="destino.html?lugar=Pucallpa">
+        <img src="imagen/pucallpa.jpg" alt="Pucallpa" />
+      </a>
+      <h3>Paquetes a Pucallpa</h3>
+      <p class="duracion">3 DÍAS / 2 NOCHES</p>
+      <p class="salida">🌎 Partiendo desde Lima</p>
+      <p class="tipo">Naturaleza + Cultura</p>
+      <p class="oferta">🔥 <a href="ofertas.html?paquete=Pucallpa">Oferta Imbatible</a></p>
+      <p class="precio">Desde <strong>S/ 330</strong> por persona</p>
+      <a href="destino.html?lugar=Pucallpa" class="btn">Ver más</a>
+      <a href="formulario.html?destino=Pucallpa" class="btn secondary">Reservar</a>
+    </div>
+
+  </main>
+
+<!-- ============ INFORMACIÓN IMPORTANTE ============ -->
+<section class="info-importante container my-5">
+  <h2>Información Importante</h2>
+  <div class="info-columns">
+    <div class="info-column">
+      <h3><i class="fas fa-check-circle"></i> Políticas de viaje</h3>
+      <ul>
+        <li>Al comprar paquetes de viaje en RUTAS DEL SOL PERU SAC...</li>
+        <li>Los cambios de pasajes se realizan...</li>
+        <li>La compra de asientos...</li>
+        <li>Reservas de hoteles...</li>
+      </ul>
+    </div>
+    <div class="info-column">
+      <h3><i class="fas fa-headset"></i> Atención Posventa</h3>
+      <ul>
+        <li>Autogestión: <strong>Mis Viajes</strong></li>
+        <li>Teléfono Posventa: <a href="tel:+518584441">+51 8584441</a></li>
+        <li>Email: soporte@rutasdelsol.com</li>
+      </ul>
+    </div>
+    <div class="info-column">
+      <h3><i class="fas fa-balance-scale"></i> Información Legal</h3>
+      <ul>
+        <li>RUTAS DEL SOL PERU SAC – RUC: 102010891647</li>
+        <li>© 2025 RUTAS DEL SOL PERU SAC</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>© 2025 RUTAS DEL SOL PERU SAC – Todos los derechos reservados | UTP</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
